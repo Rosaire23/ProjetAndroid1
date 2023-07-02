@@ -5,9 +5,9 @@ import {SafeAreaView, View, TextInput, StyleSheet, FlatList, Button} from 'react
 import GridView from './components/GridView';
 import axios from 'axios';
 
-const URL_API = 'https://api.themoviedb.org/3/movie/popular?api_key=d9fe3a4511bea3e9cdfe4407eea5edd1';
+const URL_API = 'https://api.themoviedb.org/3/movie/popular?api_key=38889b4852007755b057523ae6427fe3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w300';
-const SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?api_key=d9fe3a4511bea3e9cdfe4407eea5edd1&query=';
+const SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?api_key=38889b4852007755b057523ae6427fe3&query=';
 
 const api = axios.create({
   baseURL: URL_API
@@ -52,7 +52,7 @@ const rechercher = async (motCle) => {
       <TextInput
         style={{borderWidth:1, borderColor: '#841584', fontSize:20, width:'60%', height: 50, marginRight:5}}
         onChangeText={(value)=> setKw(value)}
-        />
+      />
         <View style={{width:'35%', height:50, margin:5}}>
           <Button
             onPress={()=>{rechercher(kw);}}
